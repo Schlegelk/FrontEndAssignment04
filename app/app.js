@@ -14,5 +14,9 @@ var noteApp = angular.module('noteApp', ['ngRoute'])
             controller: 'viewNoteController',
             templateUrl: 'app/templates/viewNote.html'
         })
+        .when('/edit/:id', {
+            controller: 'editNoteController',
+            templateUrl: 'app/templates/editNote.html'
+        })
         .otherwise({ redirectTo: '/'});
 });

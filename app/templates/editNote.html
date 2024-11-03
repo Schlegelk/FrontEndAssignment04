@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Edit Note</h1>
+    <form ng-submit="saveEdit()">
+        <label>Title:</label>
+        <input type="text" ng-model="note.title" required>
+
+        <label>Content:</label>
+        <textarea ng-model="note.content" required></textarea>
+
+        <button type="submit">Save Button</button>
+        <a href="#/view/{{ $routeParams.id }}" class="button">Cancel</a>
+    </form>
+</div>

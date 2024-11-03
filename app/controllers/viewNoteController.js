@@ -1,11 +1,6 @@
 var noteApp = angular.module('noteApp')
 
-.controller('viewNoteController', function($scope, $routeParams, $location) {
+.controller('viewNoteController', function($scope, $routeParams) {
     const notes = JSON.parse(localStorage.getItem('notes'));
     $scope.note = notes[$routeParams.id];
-
-    $scope.saveEdit = function() {
-        notes[$routeParams.id] = $scope.note;
-        localStorage.setItem('notes', JSON.stringify(notes));
-    };
 });
