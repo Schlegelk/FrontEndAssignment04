@@ -1,6 +1,6 @@
-var noteApp = angular.module('noteApp', []);
+var noteApp = angular.module('noteApp')
 
-noteApp.controller('mainController', function($scope, $location) {
+.controller('mainController', function($scope, $location) {
     $scope.notes = JSON.parse(localStorage.getItem('notes')) || [];
 
     $scope.goToNewNote = function() {

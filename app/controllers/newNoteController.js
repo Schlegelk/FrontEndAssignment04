@@ -1,6 +1,6 @@
-var noteApp = angular.module('noteApp', []);
+var noteApp = angular.module('noteApp')
 
-noteApp.controller('newNoteController', function($scope, $location) {
+.controller('newNoteController', function($scope, $location) {
     $scope.saveNote = function() {
         const notes = JSON.parse(localStorage.getItem('notes')) || [];
         notes.push({ title: $scope.title, content: $scope.content });
