@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>My Notes</h1>
+    <button ng-click="goToNewNote()">Add New Note</button>
+    <ul>
+        <li ng-repeat="note in notes track by $index">
+            <a href="" ng-click="viewNote($index)">{{ note.title }}</a>
+            <button ng-click="deleteNote($index)">Delete</button>
+        </li>
+    </ul>
+</div>
